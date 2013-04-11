@@ -59,8 +59,8 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
   
   尽可能不要使用new Array()和new Object()来创建数组和对象
   ```javascript
-  var _object = {};//创建对象
-  var _array = [];//创建数组
+  var object = {};//创建对象
+  var array = [];//创建数组
   ```
   
 **修改内置对象**
@@ -118,6 +118,7 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
   + __私有的属性__，变量和方法（在文件或类中）都应该改以下划线开头
   + __受保护的属性__，变量和方法不需要用下划线（和公开的一样）
+
   ```javascript
   function method() {
     var _privateName = 'xxx';
@@ -127,7 +128,79 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
 **缩进**
 
-  是的方式的方式的
+  默认缩进4个空格，如果使用tab则设置为4空格
+
+**代码格式化**
+  
+> 大括号
+
+  大括号应如下书写：
+  ```javascript
+  if() {
+    //...
+  } else {
+    //...
+  }
+  ```
+
+> 数组和对象初始化
+
+  以整洁为目标，如下所示：
+  ```javascript
+  //数组初始化
+  var arr = [1, 2, 3];
+  var obj = {a: 1, b: 2, c: 3};
+  //对象初始化
+  var box = {
+    width: 10,
+    height: 20
+  };
+  ```
+> 代码宽度
+  
+  为保持可读性，每行不超过80个字符
+  
+> 函数参数及传递匿名函数
+
+  以简洁清楚为目标，建议缩进2或4空格：
+  ```javascript
+  function foo(veryDescriptiveArgumentNumberOne, veryDescriptiveArgumentTwo,
+             tableModelEventHandlerProxy, artichokeDescriptorAdapterIterator) {
+    // ...
+  }
+  
+  prefix.something.reallyLongFunctionName('whatever', function(a1, a2) {
+    if(a1.equals(a2)) {
+      someOtherLongFunctionName(a1);
+    }else {
+      andNowForSomethingCompletelyDifferent(a2.parrot);
+    }
+  });
+  ```
+  
+> 换行
+
+  可以用来区分逻辑块
+
+> 空格
+
+  操作符之间尽可能使用空格，增强代码可读性
+  
+> 逗号
+
+  如在object中使用，建议使用传统的后置逗号，不要使用前置逗号
+  
+> 三元操作符
+  
+  尽可能放在一行
+  
+**字符串**
+
+  建议使用单引号 __'__ 取代 __"__
+  
+**注释**
+
+  建议使用JSDoc风格注释
     
 
 ##参考及致谢
