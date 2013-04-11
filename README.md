@@ -213,6 +213,16 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
   一般建议使用Backbone风格注释，即以描述功能为主，如 [Backbone代码] (https://github.com/documentcloud/backbone/blob/master/backbone.js)    
   但是，如果是涉及到接口或者API则建议使用JSDoc风格注释
   
+  每个单独js文件的开始，必须标明作者，时间，最后修改时间和功能
+  ```javascript
+  /**************************************
+   * Author      : XXX
+   * Function    : XXX
+   * Time        : XXX
+   * Last Update : XXX
+   **************************************/
+  ```
+  
 ##参考及致谢
 * [Google JavaScript Style Guide] (http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=var)
 * [Dojo Style Guide] (http://dojotoolkit.org/community/styleGuide)
