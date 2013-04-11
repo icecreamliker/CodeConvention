@@ -3,12 +3,11 @@ Code Convention
 
 United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
-## JavaScript语言规范
+## 编码
 
-### 编码
 统一使用utf-8
 
-### 命名规范
+## JavaScript语言规范
 
 **变量声明**
 
@@ -76,12 +75,59 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
 ## JavaScript代码风格规范
 
-**常量命名**
+**命名**
 
-  用类似NAMES_LIKE_THIS这样的形式，如：
+通常，使用类似于 *functionNamesLikeThis*, *variableNamesLikeThis*, *ClassNamesLikeThis*, *methodNamesLikeThis*, 和 *SYMBOLIC_CONSTANTS_LIKE_THIS* 这样的命名方式（驼峰式）
+
+> 函数和方法命名
+
+  用类似 *functionNamesLikeThis*, *methodNamesLikeThis* 这样的形式，如：
+  ```javascript
+  var getName = function() {
+    //...
+  }
+  function checkName() =  {
+    //...
+  }
+  ```
+  
+> 变量命名
+
+  用类似 *variableNamesLikeThis* 这样的形式，如：
+  ```javascript
+  var age = 24;
+  ```
+
+> 类命名
+
+  用类似 *ClassNamesLikeThis* 这样的形式，如：
+  ```javascript
+  function Persion() {
+    //...
+  };
+  ```
+  
+> 常量命名
+
+  用类似 *NAMES_LIKE_THIS* 这样的形式，如：
   ```javascript
   var ONE_MINUTE_COUNTS = 60;
   ```
+  
+> 属性和方法
+
+  + __私有的属性__，变量和方法（在文件或类中）都应该改以下划线开头
+  + __受保护的属性__，变量和方法不需要用下划线（和公开的一样）
+  ```javascript
+  function method() {
+    var _privateName = 'xxx';
+    var _privateFunction = function() {};
+  }
+  ```
+
+**缩进**
+
+  是的方式的方式的
     
 
 ##参考及致谢
