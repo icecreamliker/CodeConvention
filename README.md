@@ -11,7 +11,8 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
 **变量声明**
 
-  必须使用关键字var
+  必须使用关键字 __var__    
+  如果同时声明多个变量，可按个人喜好，但务必简洁，可读性强
   
 **分号**
 
@@ -36,7 +37,7 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
 **基本包装类型**
 
-  不要new基本包装类型（Boolean/Number/String）
+  不要 __new__ 基本包装类型（Boolean/Number/String）
   
 **闭包**
 
@@ -44,7 +45,7 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
 **关联数组**
 
-  不要使用Array去做 map/hash/associative 要做的事情，如果想用哈希映射等则推荐使用Object
+  不要使用 __Array__ 去做 map/hash/associative 要做的事情，如果想用哈希映射等则推荐使用 __Object__
   
 **多行字符串字面量**
   
@@ -67,8 +68,9 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
   应该尽可能避免修改内置对象原型
   
+**eval和with**
 
-
+  不允许使用eval和with
 
 
 
@@ -126,6 +128,14 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
   }
   ```
 
+> 模块命名
+
+  模块命名都使用小写单词
+  
+> 其他
+
+  命名需要语义化，如初始化方法可以使用init，如果是布尔判断则可以使用isSomeName等等
+
 **缩进**
 
   默认缩进4个空格，如果使用tab则设置为4空格
@@ -136,7 +146,7 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
   大括号应如下书写：
   ```javascript
-  if() {
+  if () {
     //...
   } else {
     //...
@@ -170,9 +180,9 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
   }
   
   prefix.something.reallyLongFunctionName('whatever', function(a1, a2) {
-    if(a1.equals(a2)) {
+    if (a1.equals(a2)) {
       someOtherLongFunctionName(a1);
-    }else {
+    } else {
       andNowForSomethingCompletelyDifferent(a2.parrot);
     }
   });
@@ -200,9 +210,9 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
   
 **注释**
 
-  建议使用JSDoc风格注释
-    
-
+  一般建议使用Backbone风格注释，即以描述功能为主，如 [Backbone代码] (https://github.com/documentcloud/backbone/blob/master/backbone.js)    
+  但是，如果是涉及到接口或者API则建议使用JSDoc风格注释
+  
 ##参考及致谢
 * [Google JavaScript Style Guide] (http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=var)
 * [Dojo Style Guide] (http://dojotoolkit.org/community/styleGuide)
