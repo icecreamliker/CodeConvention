@@ -95,9 +95,10 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
   
 > 变量命名
 
-  用类似 *variableNamesLikeThis* 这样的形式，如：
+  用类似 *variableNamesLikeThis* 或者 *variable_name_like_this* 这样的形式，如：
   ```javascript
   var age = 24;
+  var i_am_age =24;
   ```
 
 > 类命名
