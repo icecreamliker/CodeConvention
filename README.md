@@ -139,7 +139,7 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
 **缩进**
 
-  默认缩进4个空格，如果使用tab则设置为4空格
+  默认缩进4个空格，如果使用tab则设置为4空格(根据个人习惯和团队风格，可以设置为2个空格)
 
 **代码格式化**
   
