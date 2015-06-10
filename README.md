@@ -11,7 +11,7 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
 **变量声明**
 
-  必须使用关键字 __var__    
+  合理使用关键字 __var__/__let__/__const__    
   如果同时声明多个变量，可按个人喜好，但务必简洁，可读性强
   
 **分号**
@@ -72,7 +72,15 @@ United JavaScript编码指南 *[UnitedStack JavaScript Style Guide]*
 
   不允许使用eval和with
 
+**严格模式**
 
+  在函数内显示声明严格模式
+  ```javascript
+  function strict(){
+　　'use strict';
+　　return '这是严格模式。';
+　}
+  ```
 
 
 ## JavaScript代码风格规范
