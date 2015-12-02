@@ -1,86 +1,13 @@
 Code Convention
 ==============
 
-United JavaScript编码指南第二版 *[UnitedStack JavaScript Style Guide]*
+UnitedStack JavaScript编码指南第二版 *[UnitedStack JavaScript Code Style Guide]*
 
 ## 编码
 
 统一使用utf-8
 
 ## JavaScript语言规范
-
-**变量声明**
-
-  合理使用关键字 __var__/__let__/__const__    
-  如果同时声明多个变量，可按个人喜好，但务必简洁，可读性强
-  
-**分号**
-
-  尽可能在每一句的结尾都加上分号
-  
-**嵌套函数**
-
-  可以使用
-
-**异常处理**
-
-  支持使用(并且可以使用自定义异常)，特别是使用Node.js的时候，要尽量捕捉可能出现的异常
-
-**标准特性**
-
-  优于非标准特性的使用，如：
-  ```javascript
-  var a = 'abcdefg';
-  a.slice(1);//优先使用
-  a.substr(1);//不建议使用
-  ```
-
-**基本包装类型**
-
-  不要 __new__ 基本包装类型（Boolean/Number/String）
-  
-**闭包**
-
-  可以使用，但需要小心
-
-**关联数组**
-
-  不要使用 __Array__ 去做 map/hash/associative 要做的事情，如果想用哈希映射等则推荐使用 __Object__
-  
-**多行字符串字面量**
-  
-  建议不要使用 *\\* 进行字符串拼接
-  ```javascript
-  var a = 'abcdefg' +
-      'hijklmn' +
-      'opqrstuvwxyz';
-  ```
-  
-**Array和Object字面量**
-  
-  尽可能不要使用new Array()和new Object()来创建数组和对象
-  ```javascript
-  var object = {};//创建对象
-  var array = [];//创建数组
-  ```
-  
-**修改内置对象**
-
-  应该尽可能避免修改内置对象原型
-  
-**eval和with**
-
-  不允许使用eval和with
-
-**严格模式**
-
-  在函数内显示声明严格模式
-  ```javascript
-  function strict(){
-　　'use strict';
-　　return '这是严格模式。';
-　}
-  ```
 
 
 ## JavaScript代码风格规范
@@ -180,6 +107,22 @@ United JavaScript编码指南第二版 *[UnitedStack JavaScript Style Guide]*
     height: 20
   };
   ```
+> JSON对象
+
+ 对于JSON对象，如在JS文件中定义，则使用单引号`'`或不使用，但在一个文件中中需要保证格式统一，如：
+  ```javascript
+  var obj = {
+    key: 1,
+    name: 2
+  }
+  ```
+  但在JSON文件中，则需要使用`"`包括key值，如：
+  ```javascript
+  {
+    "KEY": "VALUE"
+  }
+  ```
+
 > 代码宽度
   
   为保持可读性，每行不超过80个字符
@@ -242,7 +185,28 @@ United JavaScript编码指南第二版 *[UnitedStack JavaScript Style Guide]*
 
   每个单独文件的代码行数（LOC, Line of Code）需控制在200以内；特殊情况下，可控制在300行内或更多（但不建议）
   
-  
+## JavaScript ES6使用规范
+
+**变量定义**
+
+  块作用域下，使用`let`替代`var`，例如：
+  ```javascript
+  for (let i = 0; i < 10; i++) {
+    //...
+  }
+  ```
+  对于常量，使用`const`来定义
+  对于模版，应如下使用，以保证代码高可读性：
+  ```javascript
+  var tmpl = `
+    <div>
+     <span></span>
+    </div>`;
+  ```
+  任何类的定义都使用`class`，并且使用`extends`来实现继承
+  import或者export模块时，尽量优先使用ES6标准方法
+ 
+
 ##参考及致谢
 * [Google JavaScript Style Guide] (http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=var)
 * [Dojo Style Guide] (http://dojotoolkit.org/community/styleGuide)
