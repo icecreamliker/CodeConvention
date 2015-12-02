@@ -204,6 +204,7 @@ UnitedStack JavaScript编码指南第二版 *[UnitedStack JavaScript Code Style 
     </div>`;
   ```
   任何类的定义都使用`class`，并且使用`extends`来实现继承
+
   import或者export模块时，尽量优先使用ES6标准方法
  
 
@@ -211,5 +212,6 @@ UnitedStack JavaScript编码指南第二版 *[UnitedStack JavaScript Code Style 
 * [Google JavaScript Style Guide] (http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml?showone=var)
 * [Dojo Style Guide] (http://dojotoolkit.org/community/styleGuide)
 * [Arale编码规范] (http://www.aralejs.org/docs/rules.html)
+* [广发证券编码规范] (https://github.com/gf-rd/es6-coding-style/blob/master/README.md)
 
 
